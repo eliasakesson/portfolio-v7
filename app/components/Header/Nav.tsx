@@ -1,7 +1,6 @@
 import useHeaderContext from '@/app/hooks/useHeaderContext';
 import Link from 'next/link';
 import { MdArrowDropDown } from 'react-icons/md';
-import { motion } from 'framer-motion';
 
 const Nav = () => {
 	const { activeDropdown, setActiveDropdown } = useHeaderContext();
@@ -11,9 +10,7 @@ const Nav = () => {
 			<ul className="flex gap-8 items-center font-medium text-sm">
 				<li>
 					<button
-						onClick={() =>
-							setActiveDropdown(!activeDropdown ? 'home' : '')
-						}
+						onClick={() => setActiveDropdown('home')}
 						className="flex items-center gap-1 hover:text-primary transition-all active:scale-90"
 					>
 						Home

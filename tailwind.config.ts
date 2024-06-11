@@ -17,9 +17,12 @@ const config: Config = {
 				secondary: '#f7bbac',
 				secondary_dark: '#f49e88',
 				trinary: '#e5e1df',
+				trinary_light: '#f4f2f1',
+				trinary_dark: '#d9d6d4',
 				text: '#1c1c1c',
 				text_light: '#ffffff',
-				text_light_hover: '#f4ede7'
+				text_light_hover: '#f4ede7',
+				muted: '#777'
 			},
 			fontFamily: {
 				sans: ['Plus Jakarta Sans', 'sans-serif']
@@ -33,7 +36,8 @@ const config: Config = {
 				base: 'calc(1.125rem + .15vw)',
 				md: 'calc(1rem + .15vw)',
 				sm: 'calc(.875rem + .15vw)',
-				xs: 'calc(.75rem + .15vw)'
+				xs: 'calc(.75rem + .15vw)',
+				'2xs': 'calc(.625rem + .15vw)'
 			},
 			borderColor: {
 				input: '#777'

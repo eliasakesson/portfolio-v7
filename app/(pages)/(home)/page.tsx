@@ -1,5 +1,6 @@
 import AboutMe from './AboutMe';
 import Badge from './Badge';
+import Cases from './Cases';
 import Hero from './Hero';
 import NavHelp from './NavHelp';
 
@@ -10,6 +11,7 @@ export default function Home() {
 			<Hero />
 			<AboutMe />
 			<NavHelp />
+			<Cases />
 		</main>
 	);
 }

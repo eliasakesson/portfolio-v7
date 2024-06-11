@@ -2,7 +2,7 @@ const Hero = () => {
 	return (
 		<section className="bg-bg2 h-[85vh] w-full flex flex-col items-center justify-center">
 			<div className="max-w-7xl w-full px-8 mt-16">
-				<h1 className="mt-16 text-2xl lg:text-lg-2xl text-balance font-medium">
+				<h1 className="mt-16 text-2xl lg:text-lg-2xl text-balance font-semibold">
 					Full-stack{' '}
 					<span className="text-secondary_dark">utvecklare</span> utan
 					begränsningar
