@@ -24,7 +24,7 @@ const Carousel = ({ cases }: { cases: CaseProps[] }) => {
 		});
 
 		resetCaseEvent();
-	}, [caseEvent]);
+	}, [caseEvent, resetCaseEvent]);
 
 	return (
 		<div
@@ -82,3 +82,5 @@ const CarouselItem = forwardRef(
 		);
 	}
 );
+
+CarouselItem.displayName = 'CarouselItem';
