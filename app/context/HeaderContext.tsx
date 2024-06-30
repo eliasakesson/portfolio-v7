@@ -1,11 +1,30 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export const HeaderContext = createContext({
 	activeDropdown: '',
-	setActiveDropdown: (id: string) => {}
+	setActiveDropdown: (id: string) => {},
+	lightMode: false
 });
 
 export const HeaderProvider = ({ children }: { children: React.ReactNode }) => {
+	const pathname = usePathname();
+
+	useEffect(() => {
+		const lightModePaths = ['/'];
+		if (lightModePaths.includes(pathname)) {
+			setState(prev => ({
+				...prev,
+				lightMode: true
+			}));
+		} else {
+			setState(prev => ({
+				...prev,
+				lightMode: false
+			}));
+		}
+	}, [pathname]);
+
 	const setActiveDropdown = (id: string) => {
 		setState(prev => ({
 			...prev,
@@ -15,7 +34,8 @@ export const HeaderProvider = ({ children }: { children: React.ReactNode }) => {
 
 	const initialState = {
 		activeDropdown: '',
-		setActiveDropdown
+		setActiveDropdown,
+		lightMode: false
 	};
 
 	const [state, setState] = useState(initialState);

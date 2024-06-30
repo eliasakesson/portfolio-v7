@@ -9,35 +9,37 @@ const ImageHoverVideo = ({
 	video
 }: {
 	image: string;
-	video: string;
+	video?: string;
 }) => {
 	const [hover, setHover] = useState(false);
 
 	return (
 		<div
 			className="relative w-full aspect-video"
-			onMouseEnter={() => setHover(true)}
+			onMouseEnter={() => video && setHover(true)}
 			onMouseLeave={() => setHover(false)}
 		>
-			<AnimatePresence>
-				{hover && (
-					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
-						transition={{ duration: 0.3 }}
-					>
-						<video
-							className="rounded-md object-cover"
-							autoPlay
-							loop
-							muted
-							playsInline
-							src={video}
-						/>
-					</motion.div>
-				)}
-			</AnimatePresence>
+			{video && (
+				<AnimatePresence>
+					{hover && (
+						<motion.div
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+							transition={{ duration: 0.3 }}
+						>
+							<video
+								className="rounded-md object-cover"
+								autoPlay
+								loop
+								muted
+								playsInline
+								src={video}
+							/>
+						</motion.div>
+					)}
+				</AnimatePresence>
+			)}
 			<AnimatePresence>
 				{!hover && (
 					<motion.div

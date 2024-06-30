@@ -2,7 +2,10 @@ import AboutMe from './AboutMe';
 import Badge from './Badge';
 import Cases from './Cases';
 import Hero from './Hero';
-import NavHelp from './NavHelp';
+import QuickLinks from './QuickLinks';
+import Journey from './Journey';
+import Technologies from './Technologies';
+import Contact from './Contact';
 
 export default function Home() {
 	return (
@@ -10,8 +13,11 @@ export default function Home() {
 			<Badge />
 			<Hero />
 			<AboutMe />
-			<NavHelp />
+			<QuickLinks />
+			<Technologies />
+			<Journey />
 			<Cases />
+			<Contact />
 		</main>
 	);
 }

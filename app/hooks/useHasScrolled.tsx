@@ -13,6 +13,7 @@ const useHasScrolled = () => {
 		};
 
 		window.addEventListener('scroll', handleScroll);
+		handleScroll();
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll);

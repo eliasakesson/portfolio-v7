@@ -2,7 +2,8 @@ import { useContext } from 'react';
 import { HeaderContext } from '../context/HeaderContext';
 
 const useHeaderContext = () => {
-	const { activeDropdown, setActiveDropdown } = useContext(HeaderContext);
+	const { activeDropdown, setActiveDropdown, lightMode } =
+		useContext(HeaderContext);
 
 	const setActiveDropdownFunc = (dropdown: string) => {
 		if (activeDropdown === dropdown) {
@@ -13,7 +14,11 @@ const useHeaderContext = () => {
 		setActiveDropdown(dropdown);
 	};
 
-	return { activeDropdown, setActiveDropdown: setActiveDropdownFunc };
+	return {
+		activeDropdown,
+		setActiveDropdown: setActiveDropdownFunc,
+		lightMode
+	};
 };
 
 export default useHeaderContext;
