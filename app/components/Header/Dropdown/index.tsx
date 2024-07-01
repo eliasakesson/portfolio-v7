@@ -73,7 +73,7 @@ const Dropdown = () => {
 					>
 						<button
 							onClick={() => setActiveDropdown('')}
-							className="absolute top-8 right-8 text-lg"
+							className="absolute top-8 right-8 text-lg active:scale-90 transition-all"
 						>
 							<LiaTimesSolid />
 						</button>

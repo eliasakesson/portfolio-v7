@@ -55,7 +55,7 @@ const ContactForm = () => {
 			></Textarea>
 			<button
 				type="submit"
-				className="bg-primary hover:bg-primary_dark transition-colors text-white py-4 px-16 rounded-full"
+				className="bg-primary hover:bg-primary_dark active:scale-90 transition-colors text-white py-4 px-16 rounded-full"
 			>
 				Skicka
 			</button>

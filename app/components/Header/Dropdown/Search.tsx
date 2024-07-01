@@ -177,7 +177,7 @@ const Search = () => {
 						) : (
 							<button
 								type="submit"
-								className="h-3/4 aspect-square flex items-center justify-center ml-2 text-md"
+								className="h-3/4 aspect-square flex items-center justify-center ml-2 text-md active:scale-90 transition-all"
 							>
 								<MdSearch />
 							</button>
@@ -193,7 +193,7 @@ const Search = () => {
 					</div>
 					<button
 						type="submit"
-						className="px-8 bg-primary py-auto text-white text-md rounded-lg"
+						className="px-8 bg-primary py-auto text-white text-md rounded-lg active:scale-90 transition-all"
 					>
 						Sök
 					</button>

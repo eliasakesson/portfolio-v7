@@ -16,13 +16,13 @@ const Buttons = () => {
 		<div className="flex gap-6">
 			<button
 				onClick={decrementActiveCaseIndex}
-				className="text-primary hover:bg-trinary_light active:bg-trinary rounded-full p-2 transition-colors"
+				className="text-primary hover:bg-trinary_light active:bg-trinary active:scale-90 rounded-full p-2 transition-all"
 			>
 				<MdChevronLeft size={32} />
 			</button>
 			<button
 				onClick={incrementActiveCaseIndex}
-				className="text-primary hover:bg-trinary_light active:bg-trinary rounded-full p-2 transition-colors"
+				className="text-primary hover:bg-trinary_light active:bg-trinary active:scale-90 rounded-full p-2 transition-all"
 			>
 				<MdChevronRight size={32} />
 			</button>

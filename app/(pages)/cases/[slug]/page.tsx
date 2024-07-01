@@ -5,7 +5,7 @@ import { SiGithub } from 'react-icons/si';
 import Video from '../components/Video';
 import { getCase, getCaseSlugs } from '@/app/utils/getCase';
 import Description from '../components/Description';
-import Contact from '../components/Contact';
+import Contact from '../../(home)/Contact';
 
 export const dynamicParams = false;
 

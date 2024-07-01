@@ -74,8 +74,8 @@ const HeroClient = ({
 	};
 
 	return (
-		<section className="h-[85vh] w-full flex flex-col items-center justify-center text-text_light">
-			<div className="absolute top-0 left-0 right-0 bottom-[15vh] -z-10">
+		<section className="lg:h-[85vh] h-[100dvh] w-full flex flex-col items-center justify-center text-text_light">
+			<div className="absolute top-0 left-0 right-0 bottom-0 lg:bottom-[15vh] -z-10">
 				<div className="relative w-full h-full">
 					{heroVideo ? (
 						<video
@@ -84,6 +84,9 @@ const HeroClient = ({
 							autoPlay
 							loop
 							muted
+							controls={false}
+							playsInline
+							preload="auto"
 						>
 							<source src={heroVideo} type="video/mp4" />
 						</video>
@@ -138,7 +141,7 @@ const HeroClient = ({
 						</div>
 						<button
 							onClick={pauseVideo}
-							className="border-2 border-white p-2 rounded-full font-medium text-sm hover:text-primary hover:border-primary transition-colors"
+							className="border-2 border-white p-2 rounded-full font-medium text-sm hover:text-primary hover:border-primary active:scale-90 transition-all"
 						>
 							{isPlaying ? <MdPause /> : <MdPlayArrow />}
 						</button>

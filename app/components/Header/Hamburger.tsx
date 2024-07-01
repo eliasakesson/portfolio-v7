@@ -36,7 +36,7 @@ const Hamburger = () => {
 	return (
 		<>
 			<button
-				className="lg:hidden flex items-center gap-2 font-medium"
+				className="lg:hidden flex items-center gap-2 font-medium active:text-primary active:scale-90 transition-all"
 				onClick={onClick}
 			>
 				{hamburgerOpen ? (
@@ -132,7 +132,7 @@ const Main = () => {
 								<Link
 									onClick={() => setActiveDropdown('')}
 									href={item.url}
-									className="text-lg w-full font-medium hover:text-primary transition-all"
+									className="text-lg w-full font-medium hover:text-primary active:scale-90 transition-all"
 								>
 									{item.title}
 								</Link>
@@ -143,7 +143,7 @@ const Main = () => {
 											`hamburger-${item.title}`
 										)
 									}
-									className="text-lg font-medium flex items-center justify-between w-full gap-1 hover:text-primary transition-all active:scale-90"
+									className="text-lg font-medium flex items-center justify-between w-full gap-1 hover:text-primary active:scale-90 transition-all"
 								>
 									{item.title}
 									<div
@@ -200,7 +200,7 @@ const SubMenu = () => {
 		>
 			<button
 				onClick={() => setActiveDropdown('hamburger')}
-				className="text-lg font-medium flex items-center gap-2 mb-4"
+				className="text-lg font-medium flex items-center gap-2 mb-4 hover:text-primary active:scale-90 transition-all"
 			>
 				<MdOutlineArrowRightAlt className="rotate-180" />
 				Back
@@ -216,7 +216,7 @@ const SubMenu = () => {
 							<Link
 								href={item.url}
 								onClick={() => setActiveDropdown('')}
-								className="flex items-center gap-4"
+								className="flex items-center gap-4 hover:text-primary active:scale-90 transition-all"
 							>
 								<HeaderItemInside item={item} />
 							</Link>
@@ -225,7 +225,7 @@ const SubMenu = () => {
 								href={item.file}
 								target="_blank"
 								rel="noreferrer"
-								className="flex items-center gap-4"
+								className="flex items-center gap-4 hover:text-primary active:scale-90 transition-all"
 							>
 								<HeaderItemInside item={item} />
 							</a>

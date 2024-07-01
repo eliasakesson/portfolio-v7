@@ -54,7 +54,7 @@ const Video = ({ video }: { video: string }) => {
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
 								exit={{ opacity: 0 }}
-								className="absolute flex items-center gap-2 bottom-4 left-4 text-sm lg:text-md bg-black text-text_light bg-opacity-60 px-6 py-3 rounded-full hover:bg-opacity-100"
+								className="absolute flex items-center gap-2 bottom-4 left-4 text-sm lg:text-md bg-black text-text_light bg-opacity-60 px-6 py-3 rounded-full hover:bg-opacity-100 active:scale-90 transition-all"
 							>
 								Pausa
 								<MdPause />
@@ -79,14 +79,14 @@ const Video = ({ video }: { video: string }) => {
 									<div className="flex gap-2 lg:mt-8 mt-4">
 										<button
 											onClick={() => setPlaying(true)}
-											className="bg-primary hover:bg-primary_dark transition-colors text-text_light text-sm lg:text-md px-4 py-2 lg:px-6 lg:py-3 rounded-full flex items-center gap-2"
+											className="bg-primary hover:bg-primary_dark active:scale-90 transition-all text-text_light text-sm lg:text-md px-4 py-2 lg:px-6 lg:py-3 rounded-full flex items-center gap-2"
 										>
 											Spela upp
 											<MdPlayArrow />
 										</button>
 										<button
 											onClick={rewindVideo}
-											className="bg-black bg-opacity-75 hover:bg-opacity-100 transition-colors h-full aspect-square lg:p-5 p-3 text-text_light rounded-full"
+											className="bg-black bg-opacity-75 hover:bg-opacity-100 active:scale-90 transition-all h-full aspect-square lg:p-5 p-3 text-text_light rounded-full"
 										>
 											<RiRewindStartFill />
 										</button>
