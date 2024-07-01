@@ -106,7 +106,7 @@ const HeroClient = ({
 				</div>
 			</div>
 			<div className="max-w-8xl w-full px-8 mt-16">
-				<h1 className="mt-16 text-2xl lg:text-lg-2xl text-balance font-semibold">
+				<h1 className="mt-24 text-2xl lg:text-lg-2xl leading-tight lg:leading-normal text-balance font-semibold">
 					{heroTitle.map((title, i) => (
 						<Fragment key={i}>
 							{title.highlighted ? (

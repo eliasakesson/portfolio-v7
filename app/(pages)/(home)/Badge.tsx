@@ -12,7 +12,7 @@ const Badge = async () => {
 	return (
 		<Link
 			href={props.badgeLink}
-			className="group bg-secondary absolute mt-24 left-1/2 -translate-x-1/2 p-6 w-full max-w-[calc(100vw-64px)] 2xl:max-w-8xl rounded-lg text-md font-medium flex gap-2 items-center justify-between"
+			className="group bg-secondary absolute mt-20 lg:mt-24 left-1/2 -translate-x-1/2 p-6 w-full max-w-[calc(100vw-64px)] 2xl:max-w-8xl rounded-lg text-md font-medium flex gap-2 items-center justify-between"
 		>
 			<div className="flex items-center gap-4">
 				<MdOutlineScreenshotMonitor size={28} className="flex-none" />
