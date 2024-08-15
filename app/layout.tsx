@@ -19,7 +19,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="sv">
 			<AppWrapper>
 				<body className={`${inter.className} bg-white text-text`}>
 					<Header />
