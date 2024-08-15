@@ -6,6 +6,7 @@ import Video from '../components/Video';
 import { getCase, getCaseSlugs } from '@/app/utils/getCase';
 import Description from '../components/Description';
 import Contact from '../../(home)/Contact';
+import { Metadata } from 'next';
 
 export const dynamicParams = false;
 
@@ -13,6 +14,19 @@ export async function generateStaticParams() {
 	const caseSlugs = await getCaseSlugs();
 
 	return caseSlugs.map(slug => ({ slug }));
+}
+
+export async function generateMetadata({
+	params
+}: {
+	params: { slug: string };
+}) {
+	const c = await getCase(params.slug);
+
+	return {
+		title: c?.title || `${params.slug} | Elias Åkesson`,
+		description: c?.description[0] || 'Ett projekt jag har arbetat med.'
+	};
 }
 
 const Page = async ({ params }: { params: { slug: string } }) => {
