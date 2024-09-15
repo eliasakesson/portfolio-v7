@@ -1,8 +1,15 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import Underline from './Underline';
+import useHeaderProps from '../hooks/useHeaderProps';
 
 export default function Footer() {
+	const { navigation } = useHeaderProps();
+
+	console.log(navigation);
+
 	return (
 		<footer className="bg-text text-text_light_hover">
 			<div className="mx-auto max-w-8xl px-8 ">
@@ -28,15 +35,26 @@ export default function Footer() {
 						<h3 className="text-lg font-semibold">Navigation</h3>
 						<nav>
 							<ul className="space-y-2">
-								<li>
-									<Link
-										href="/"
-										className="group relative pb-0.5"
-									>
-										Hem
-										<Underline reverse white />
-									</Link>
-								</li>
+								{navigation.map(nav =>
+									nav.url ? (
+										<NavItem
+											key={nav.title}
+											url={nav.url}
+											title={nav.title}
+										/>
+									) : (
+										nav.dropdownItems?.map(
+											item =>
+												item.url && (
+													<NavItem
+														key={item.title}
+														url={item.url}
+														title={item.title}
+													/>
+												)
+										)
+									)
+								)}
 							</ul>
 						</nav>
 					</div>
@@ -65,3 +83,12 @@ export default function Footer() {
 		</footer>
 	);
 }
+
+const NavItem = ({ url, title }: { url: string; title: string }) => (
+	<li>
+		<Link href={url} className="group relative pb-0.5">
+			{title}
+			<Underline reverse white />
+		</Link>
+	</li>
+);
