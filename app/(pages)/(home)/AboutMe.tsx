@@ -9,7 +9,10 @@ const AboutMe = async () => {
 
 	return (
 		<section className="py-24 lg:py-48 px-8 flex flex-col gap-32 bg-bg w-full">
-			<a href="" className="group relative w-fit mx-auto">
+			<a
+				href="https://coursera.org/share/a8ada1866efaafb37646b7b48434ac51"
+				className="group relative w-fit mx-auto"
+			>
 				<article className="max-w-8xl w-full bg-white rounded-xl flex lg:gap-8 lg:items-center lg:flex-row flex-col">
 					<div className="relative w-fit h-24 lg:pl-16 lg:pr-0 px-8 lg:my-0 mt-8 mb-4">
 						<Image
