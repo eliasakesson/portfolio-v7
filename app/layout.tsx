@@ -4,6 +4,7 @@ import './globals.css';
 import AppWrapper from './context';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,6 +21,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="sv">
+			<Script
+				defer
+				src="https://cloud.umami.is/script.js"
+				data-website-id="a3274aa8-e962-442b-bc5c-50ac241129af"
+			></Script>
 			<AppWrapper>
 				<body className={`${inter.className} bg-white text-text`}>
 					<Header />
